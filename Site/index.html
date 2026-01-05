@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rafael M. Enero | Portfolio</title>
+  <meta name="description" content="Student portfolio of Rafael M. Enero." />
+  <link rel="stylesheet" href= "./style.css" />
+  <script src="script.js"></script>
+</head>
+<body>
+    <div class="bg-grid"></div>
+<div class="bg-orb orb-1"></div>
+<div class="bg-orb orb-2"></div>
+
+  <header class="topbar">
+    <div class="container topbar__inner">
+      <div class="brand">
+        <span class="brand__mark">RME</span>
+      </div>
+
+      <button class="icon-btn" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+        <span id="themeIcon" aria-hidden="true">☾</span>
+      </button>
+    </div>
+  </header>
+
+  <main class="container">
+    
+    <section class="hero" id="home">
+      <div class="hero__content">
+        <p class="hero__hello">Hello, I’m</p>
+        <h1 class="hero__title">Rafael M. Enero</h1>
+        <p class="hero__subtitle">BS Information Technology Student</p>
+        <p class="hero__desc">
+          I am a fourth-year BS Information Technology student focused on building practical systems and documenting my projects and design work. This portfolio highlights my ongoing learning and skill development across different areas of information technology.
+        </p>
+
+        <div class="hero__actions">
+          <a class="btn btn--solid" href="#contact">Contact Me</a>
+          <a class="btn btn--outline" href="#projects">View Projects <span class="arrow">→</span></a>
+        </div>
+      </div>
+
+      <div class="hero__photo">
+        <div class="photo-frame">
+          <img src="./assets/Mypic.png" alt="Rafael M. Enero" />
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="section" id="projects">
+      <div class="section__head">
+        <h2>Projects</h2>
+        <p>My work and outputs.</p>
+      </div>
+
+      <div class="filters" role="tablist" aria-label="Work filters">
+        <button class="chip is-active" data-filter="all">All</button>
+        <button class="chip" data-filter="projects">Projects</button>
+        <button class="chip" data-filter="designs">Designs</button>
+        <button class="chip" data-filter="Documentation">Documentation</button>
+      </div>
+
+      <div class="grid" id="workGrid">
+        
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section" id="about">
+      <div class="section__head">
+        <h2>About Me</h2>
+        <p>Short background and what I’m currently focusing on.</p>
+      </div>
+
+      <div class="about">
+        <div class="card">
+          <h3>Quick Intro</h3>
+          <p>
+           I am a fourth-year BS Information Technology student focused on building practical systems and documenting my projects and design work. 
+           This portfolio highlights my ongoing learning and skill development across different areas of information technology.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Skills</h3>
+          <ul>
+            <p>Web Development</p>
+            <p>Database Management</p>
+            <P>Mobile App Development</P>
+            <P>Graphic Design</P>
+            <P>Technical Writing and Documentation</P>
+          </ul>
+      </div>
+    </section>
+
+    <!-- TOOLS / LOGOS -->
+    <section class="section" id="tools">
+      <div class="section__head">
+        <h2>Tools</h2>
+        <p>Technologies and software I frequently use.</p>
+      </div>
+
+      <div class="tools">
+        <!-- Use text placeholders now; replace with actual logos later -->
+        <div class="tool">Figma</div>
+        <div class="tool">Adobe Illustrator</div>
+        <div class="tool">VS Code</div>
+        <div class="tool">Android Studio</div>
+        <div class="tool">PHP</div>
+        <div class="tool">Python</div>
+        <div class="tool">SQL</div>
+        <div class="tool">MS Office</div>
+        <div class="tool">Canva</div>
+        <div class="tool">Html</div>
+        <div class="tool">CSS</div>
+        <div class="tool">JavaScript</div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section" id="contact">
+      <div class="section__head">
+        <h2>Contact</h2>
+        <p>Send a message or reach me through the details below.</p>
+      </div>
+
+      <div class="contact">
+        <form class="card form" onsubmit="return false;">
+          <label>
+            Name
+            <input type="text" placeholder="Your name" />
+          </label>
+          <label>
+            Email
+            <input type="email" placeholder="your@email.com" />
+          </label>
+          <label>
+            Message
+            <textarea rows="5" placeholder="Write your message..."></textarea>
+          </label>
+          <button class="btn btn--solid" type="button" id="fakeSend">Send Message</button>
+        </form>
+
+        <div class="card contact__info">
+          <h3>Details</h3>
+          <p><strong>Email:</strong> rm.enero22@gmail.com</p>
+          <p><strong>Phone:</strong> +639105164534</p>
+          <p><strong>Location:</strong> Sitio Amao, Brgy. Silangang Malicboy, Pagbilao, Quezon</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p>© <span id="year"></span> RME</p>
+      <a class="toplink" href="#home">Back to top ↑</a>
+    </div>
+  </footer>
+</body>
+</html>

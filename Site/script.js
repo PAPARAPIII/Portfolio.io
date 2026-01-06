@@ -60,7 +60,7 @@ document.querySelectorAll(".chip").forEach(btn => {
   });
 });
 
-// Fake form interaction
+// form interaction
 document.getElementById("fakeSend").addEventListener("click", () => {
   alert("Message UI only. Add backend later if needed.");
 });

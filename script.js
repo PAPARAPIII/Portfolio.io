@@ -25,7 +25,9 @@ toggleBtn.addEventListener("click", () => {
 const workItems = [
   { title: "01", type: "projects", desc: "Short description here.", tags: ["Web", "Student"] },
   { title: "01", type: "designs", desc: "Short description here.", tags: ["UI", "Figma"] },
-  { title: "01", type: "Documentation", desc: "Short description here.", tags: ["Documentation"] },
+  { title: "01", type: "Certificates", desc: "Google Analytics For Beginners", tags: ["Certificates"], link: "Certs/google-analytics-beginners.pdf" },
+  { title: "02", type: "Certificates", desc: "Introduction to HTML", tags: ["Certificates"], link: "Certs/Introduction-to-Html.pdf" },
+  { title: "03", type: "Certificates", desc: "Introduction To Sql.", tags: ["Certificates"], link: "Certs/Intro-of-Sql.pdf" },
 ];
 
 const grid = document.getElementById("workGrid");
@@ -39,12 +41,19 @@ function render(filter){
     card.className = "card";
 
     card.innerHTML = `
-      <h3>${item.title}</h3>
-      <p class="muted">${item.desc}</p>
-      <div class="work__tags">
-        ${item.tags.map(t => `<span class="tag">${t}</span>`).join("")}
-      </div>
-    `;
+  <h3>${item.title}</h3>
+  <p class="muted">${item.desc}</p>
+
+  ${item.link ? `
+    <a href="${item.link}" target="_blank" class="cert-link">
+      📄 View Certificate (PDF)
+    </a>
+  ` : ""}
+
+  <div class="work__tags">
+    ${item.tags.map(t => `<span class="tag">${t}</span>`).join("")}
+  </div>
+`;
     grid.appendChild(card);
   });
 }
